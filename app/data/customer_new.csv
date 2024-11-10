@@ -1,0 +1,13 @@
+name,type,location_name,inclusion_type,additional_params,icon
+BO,Customer,BO,Include,,default_icon
+NA,Customer,NA,Include,,default_icon
+PR,Customer,PR,Include,,default_icon
+SP,Customer,SP,Include,,default_icon
+WO,Customer,WO,Include,,default_icon
+BR,Customer,BR,Include,,default_icon
+CO,Customer,CO,Include,,default_icon
+HA,Customer,HA,Include,,default_icon
+MN,Customer,MN,Include,,default_icon
+NH,Customer,NH,Include,,default_icon
+NL,Customer,NL,Include,,default_icon
+PO,Customer,PO,Include,,default_icon

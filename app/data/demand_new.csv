@@ -1,0 +1,13 @@
+customerName,productName,demandType,parameters,timePeriod,currency,inclusionType
+BO,Nerd,Periodic demand,"{""demand"": 450}",Q1 2023,USD,Include
+BR,Nerd,Periodic demand," {""demand"": 60}",Q1 2023,USD,Include
+CO,Nerd,Periodic demand," {""demand"": 80}",Q1 2023,USD,Include
+HA,Nerd,Periodic demand,"{""demand"": 130}",Q1 2023,USD,Include
+MN,Nerd,Periodic demand," {""demand"": 110}",Q1 2023,USD,Include
+NA,Nerd,Periodic demand," {""demand"": 140}",Q1 2023,USD,Include
+NH,Nerd,Periodic demand," {""demand"": 140}",Q1 2023,USD,Include
+NL,Nerd,Periodic demand," {""demand"": 70}",Q1 2023,USD,Include
+PO,Nerd,Periodic demand," {""demand"": 120}",Q1 2023,USD,Include
+PR,Nerd,Periodic demand," {""demand"": 310}",Q1 2023,USD,Include
+SP,Nerd,Periodic demand," {""demand"": 200}",Q1 2023,USD,Include
+WO,Nerd,Periodic demand," {""demand"": 190}",Q1 2023,USD,Include

@@ -1,0 +1,6 @@
+name,capacity,capacityUnit,speed,speedUnit
+Truck,100,ft3,60,km/h
+Lorry,200,kg,80,mph
+Van,300,lb,100,km/h
+Truck,400,m3,120,mph
+Truck,500,pcs,140,km/h
