@@ -1,7 +1,7 @@
 {
-  "id": "19a987d8-2884-4bad-b72a-ad2c6c2d1051",
+  "id": "ce2aebdf-664f-44f4-9e11-561bf8795f05",
   "prevId": "00000000-0000-0000-0000-000000000000",
-  "version": "6",
+  "version": "7",
   "dialect": "postgresql",
   "tables": {
     "public.accounts": {
@@ -97,10 +97,23 @@
         "idx_assets_constraints_group_time": {
           "name": "idx_assets_constraints_group_time",
           "columns": [
-            "group_id",
-            "time_period"
+            {
+              "expression": "group_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "time_period",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -168,16 +181,32 @@
         "idx_bom_name": {
           "name": "idx_bom_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_bom_end_product": {
           "name": "idx_bom_end_product",
           "columns": [
-            "end_product_id"
+            {
+              "expression": "end_product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -231,16 +260,32 @@
         "idx_bom_byproducts_bom_id": {
           "name": "idx_bom_byproducts_bom_id",
           "columns": [
-            "bom_id"
+            {
+              "expression": "bom_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_bom_byproducts_product_id": {
           "name": "idx_bom_byproducts_product_id",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -307,16 +352,32 @@
         "idx_bom_components_bom_id": {
           "name": "idx_bom_components_bom_id",
           "columns": [
-            "bom_id"
+            {
+              "expression": "bom_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_bom_components_product_id": {
           "name": "idx_bom_components_product_id",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -397,10 +458,23 @@
         "idx_cash_accounts_facility_currency": {
           "name": "idx_cash_accounts_facility_currency",
           "columns": [
-            "facility_id",
-            "currency"
+            {
+              "expression": "facility_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "currency",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -567,31 +641,68 @@
         "idx_cog_location_name": {
           "name": "idx_cog_location_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_cog_location_city": {
           "name": "idx_cog_location_city",
           "columns": [
-            "city"
+            {
+              "expression": "city",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_cog_location_country": {
           "name": "idx_cog_location_country",
           "columns": [
-            "country"
+            {
+              "expression": "country",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_cog_location_lat_long": {
           "name": "idx_cog_location_lat_long",
           "columns": [
-            "latitude",
-            "longitude"
+            {
+              "expression": "latitude",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "longitude",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -679,30 +790,62 @@
         "idx_custom_constraints_left_hand_side": {
           "name": "idx_custom_constraints_left_hand_side",
           "columns": [
-            "left_hand_side"
+            {
+              "expression": "left_hand_side",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_custom_constraints_right_hand_side": {
           "name": "idx_custom_constraints_right_hand_side",
           "columns": [
-            "right_hand_side"
+            {
+              "expression": "right_hand_side",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_custom_constraints_comparison_type": {
           "name": "idx_custom_constraints_comparison_type",
           "columns": [
-            "comparison_type"
+            {
+              "expression": "comparison_type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_custom_constraints_constraint_type": {
           "name": "idx_custom_constraints_constraint_type",
           "columns": [
-            "constraint_type"
+            {
+              "expression": "constraint_type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -918,11 +1061,29 @@
         "idx_demand_customer_product_inclusion": {
           "name": "idx_demand_customer_product_inclusion",
           "columns": [
-            "customer_id",
-            "product_id",
-            "inclusion_type"
+            {
+              "expression": "customer_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "inclusion_type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -1021,9 +1182,17 @@
         "idx_demand_coverage_by_distance_site": {
           "name": "idx_demand_coverage_by_distance_site",
           "columns": [
-            "site_id"
+            {
+              "expression": "site_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -1143,30 +1312,62 @@
         "idx_demand_fulfillment_customer": {
           "name": "idx_demand_fulfillment_customer",
           "columns": [
-            "customer_id"
+            {
+              "expression": "customer_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_demand_fulfillment_product": {
           "name": "idx_demand_fulfillment_product",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_demand_fulfillment_iteration": {
           "name": "idx_demand_fulfillment_iteration",
           "columns": [
-            "iteration"
+            {
+              "expression": "iteration",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_demand_fulfillment_period": {
           "name": "idx_demand_fulfillment_period",
           "columns": [
-            "period"
+            {
+              "expression": "period",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -1252,9 +1453,17 @@
         "idx_distance_coverage_by_demand_site": {
           "name": "idx_distance_coverage_by_demand_site",
           "columns": [
-            "site_id"
+            {
+              "expression": "site_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -1368,10 +1577,23 @@
         "idx_facilities_name_inclusion_type": {
           "name": "idx_facilities_name_inclusion_type",
           "columns": [
-            "name",
-            "inclusion_type"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "inclusion_type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -1449,10 +1671,23 @@
         "idx_facility_expenses_facility_type": {
           "name": "idx_facility_expenses_facility_type",
           "columns": [
-            "facility_id",
-            "expense_type"
+            {
+              "expression": "facility_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "expense_type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -1773,16 +2008,32 @@
         "idx_if_condition_id": {
           "name": "idx_if_condition_id",
           "columns": [
-            "if_condition_id"
+            {
+              "expression": "if_condition_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_then_condition_id": {
           "name": "idx_then_condition_id",
           "columns": [
-            "then_condition_id"
+            {
+              "expression": "then_condition_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -1855,9 +2106,17 @@
         "idx_linear_ranges_name": {
           "name": "idx_linear_ranges_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -1885,16 +2144,32 @@
         "idx_location_group_id": {
           "name": "idx_location_group_id",
           "columns": [
-            "location_group_id"
+            {
+              "expression": "location_group_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_location_id": {
           "name": "idx_location_id",
           "columns": [
-            "location_id"
+            {
+              "expression": "location_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -1971,9 +2246,17 @@
         "idx_location_group_name": {
           "name": "idx_location_group_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -2072,39 +2355,90 @@
         "idx_location_name": {
           "name": "idx_location_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_location_city": {
           "name": "idx_location_city",
           "columns": [
-            "city"
+            {
+              "expression": "city",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_location_country": {
           "name": "idx_location_country",
           "columns": [
-            "country"
+            {
+              "expression": "country",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_location_lat_long": {
           "name": "idx_location_lat_long",
           "columns": [
-            "latitude",
-            "longitude"
+            {
+              "expression": "latitude",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "longitude",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_location_name_country": {
           "name": "idx_location_name_country",
           "columns": [
-            "name",
-            "country"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "country",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": true
+          "isUnique": true,
+          "where": "\"locations\".\"autofill_coordinates\" IS TRUE",
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -2164,10 +2498,23 @@
         "idx_objective_members_name_inclusion": {
           "name": "idx_objective_members_name_inclusion",
           "columns": [
-            "name",
-            "inclusion_type"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "inclusion_type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -2304,30 +2651,62 @@
         "idx_paths_from_location": {
           "name": "idx_paths_from_location",
           "columns": [
-            "from_location"
+            {
+              "expression": "from_location",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_paths_to_location": {
           "name": "idx_paths_to_location",
           "columns": [
-            "to_location"
+            {
+              "expression": "to_location",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_paths_cost_calculation_policy": {
           "name": "idx_paths_cost_calculation_policy",
           "columns": [
-            "cost_calculation_policy"
+            {
+              "expression": "cost_calculation_policy",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_paths_vehicle_type_id": {
           "name": "idx_paths_vehicle_type_id",
           "columns": [
-            "vehicle_type_id"
+            {
+              "expression": "vehicle_type_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -2434,9 +2813,17 @@
         "idx_period_groups_name": {
           "name": "idx_period_groups_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -2490,17 +2877,38 @@
         "periods_name_idx": {
           "name": "periods_name_idx",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "periods_start_end_idx": {
           "name": "periods_start_end_idx",
           "columns": [
-            "start",
-            "end"
+            {
+              "expression": "start",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "end",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -2564,38 +2972,83 @@
         "idx_processing_costs_facility_product": {
           "name": "idx_processing_costs_facility_product",
           "columns": [
-            "facility_id",
-            "product_id"
+            {
+              "expression": "facility_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_processing_costs_type": {
           "name": "idx_processing_costs_type",
           "columns": [
-            "type"
+            {
+              "expression": "type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_processing_costs_currency": {
           "name": "idx_processing_costs_currency",
           "columns": [
-            "currency"
+            {
+              "expression": "currency",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_processing_costs_units": {
           "name": "idx_processing_costs_units",
           "columns": [
-            "units"
+            {
+              "expression": "units",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_processing_costs_time_period": {
           "name": "idx_processing_costs_time_period",
           "columns": [
-            "time_period_id"
+            {
+              "expression": "time_period_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -2804,38 +3257,83 @@
         "idx_product_flows_source_dest": {
           "name": "idx_product_flows_source_dest",
           "columns": [
-            "source_id",
-            "destination_id"
+            {
+              "expression": "source_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "destination_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_flows_vehicle_type": {
           "name": "idx_product_flows_vehicle_type",
           "columns": [
-            "vehicle_type_id"
+            {
+              "expression": "vehicle_type_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_flows_product": {
           "name": "idx_product_flows_product",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_flows_time_period": {
           "name": "idx_product_flows_time_period",
           "columns": [
-            "time_period_id"
+            {
+              "expression": "time_period_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_flows_inclusion_type": {
           "name": "idx_product_flows_inclusion_type",
           "columns": [
-            "inclusion_type"
+            {
+              "expression": "inclusion_type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -2929,16 +3427,32 @@
         "idx_product_group_id": {
           "name": "idx_product_group_id",
           "columns": [
-            "product_group_id"
+            {
+              "expression": "product_group_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_id": {
           "name": "idx_product_id",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -3015,9 +3529,17 @@
         "idx_product_group_name": {
           "name": "idx_product_group_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -3166,37 +3688,77 @@
         "idx_product_storages_label": {
           "name": "idx_product_storages_label",
           "columns": [
-            "label"
+            {
+              "expression": "label",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_storages_facility": {
           "name": "idx_product_storages_facility",
           "columns": [
-            "facility_id"
+            {
+              "expression": "facility_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_storages_product": {
           "name": "idx_product_storages_product",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_storages_time_period": {
           "name": "idx_product_storages_time_period",
           "columns": [
-            "time_period_id"
+            {
+              "expression": "time_period_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_product_storages_inclusion_type": {
           "name": "idx_product_storages_inclusion_type",
           "columns": [
-            "inclusion_type"
+            {
+              "expression": "inclusion_type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -3347,30 +3909,62 @@
         "idx_production_label": {
           "name": "idx_production_label",
           "columns": [
-            "label"
+            {
+              "expression": "label",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_production_site": {
           "name": "idx_production_site",
           "columns": [
-            "site_id"
+            {
+              "expression": "site_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_production_product": {
           "name": "idx_production_product",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_production_time_period": {
           "name": "idx_production_time_period",
           "columns": [
-            "time_period_id"
+            {
+              "expression": "time_period_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -3527,37 +4121,77 @@
         "idx_production_label_no": {
           "name": "idx_production_label_no",
           "columns": [
-            "label"
+            {
+              "expression": "label",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_production_site_no": {
           "name": "idx_production_site_no",
           "columns": [
-            "site_id"
+            {
+              "expression": "site_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_production_product_no": {
           "name": "idx_production_product_no",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_production_bom_no": {
           "name": "idx_production_bom_no",
           "columns": [
-            "bom_id"
+            {
+              "expression": "bom_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_production_time_period_no": {
           "name": "idx_production_time_period_no",
           "columns": [
-            "time_period_id"
+            {
+              "expression": "time_period_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -3740,23 +4374,47 @@
         "idx_sale_batches_source": {
           "name": "idx_sale_batches_source",
           "columns": [
-            "source_id"
+            {
+              "expression": "source_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_sale_batches_product": {
           "name": "idx_sale_batches_product",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_sale_batches_time_period": {
           "name": "idx_sale_batches_time_period",
           "columns": [
-            "time_period_id"
+            {
+              "expression": "time_period_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -3836,16 +4494,32 @@
         "idx_site_state_changes_site": {
           "name": "idx_site_state_changes_site",
           "columns": [
-            "site_id"
+            {
+              "expression": "site_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_site_state_changes_time_period": {
           "name": "idx_site_state_changes_time_period",
           "columns": [
-            "time_period_id"
+            {
+              "expression": "time_period_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -3950,23 +4624,47 @@
         "idx_sourcing_product_id": {
           "name": "idx_sourcing_product_id",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_sourcing_time_period_id": {
           "name": "idx_sourcing_time_period_id",
           "columns": [
-            "time_period_id"
+            {
+              "expression": "time_period_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_sourcing_delivery_destination": {
           "name": "idx_sourcing_delivery_destination",
           "columns": [
-            "delivery_destination"
+            {
+              "expression": "delivery_destination",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -4070,16 +4768,32 @@
         "idx_supplier_products_supplier_id": {
           "name": "idx_supplier_products_supplier_id",
           "columns": [
-            "supplier_id"
+            {
+              "expression": "supplier_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_supplier_products_product_id": {
           "name": "idx_supplier_products_product_id",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -4346,32 +5060,74 @@
         "unique_conversion": {
           "name": "unique_conversion",
           "columns": [
-            "product_id",
-            "unit_from",
-            "unit_to"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "unit_from",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "unit_to",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": true
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_unit_conversions_product_id": {
           "name": "idx_unit_conversions_product_id",
           "columns": [
-            "product_id"
+            {
+              "expression": "product_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_unit_conversions_unit_from": {
           "name": "idx_unit_conversions_unit_from",
           "columns": [
-            "unit_from"
+            {
+              "expression": "unit_from",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_unit_conversions_unit_to": {
           "name": "idx_unit_conversions_unit_to",
           "columns": [
-            "unit_to"
+            {
+              "expression": "unit_to",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -4427,9 +5183,17 @@
         "idx_units_name": {
           "name": "idx_units_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {},
@@ -4490,23 +5254,47 @@
         "idx_vehicle_types_name": {
           "name": "idx_vehicle_types_name",
           "columns": [
-            "name"
+            {
+              "expression": "name",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_vehicle_types_capacity_unit": {
           "name": "idx_vehicle_types_capacity_unit",
           "columns": [
-            "capacity_unit"
+            {
+              "expression": "capacity_unit",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         },
         "idx_vehicle_types_speed_unit": {
           "name": "idx_vehicle_types_speed_unit",
           "columns": [
-            "speed_unit"
+            {
+              "expression": "speed_unit",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
           ],
-          "isUnique": false
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
         }
       },
       "foreignKeys": {
@@ -4543,6 +5331,7 @@
   },
   "enums": {},
   "schemas": {},
+  "sequences": {},
   "_meta": {
     "columns": {},
     "schemas": {},

@@ -1,0 +1,11 @@
+leftHandSide,comparisonType,rightHandSide,constraintType
+LHS_0,so,RHS_0,Soft
+LHS_1,as,RHS_1,Hard
+LHS_2,no,RHS_2,Mandatory
+LHS_3,so,RHS_3,Soft
+LHS_4,ft,RHS_4,Soft
+LHS_5,rh,RHS_5,Soft
+LHS_6,wa,RHS_6,Soft
+LHS_7,op,RHS_7,Optional
+LHS_8,or,RHS_8,Soft
+LHS_9,ha,RHS_9,Hardss
